@@ -1,0 +1,304 @@
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.network_load_balancer["deveu-dns-lb"].oci_network_load_balancer_network_load_balancer.network_load_balancer[0m will be created
+[0m  [32m+[0m[0m resource "oci_network_load_balancer_network_load_balancer" "network_load_balancer" {
+      [32m+[0m[0m compartment_id                 = "ocid1.compartment.oc1..aaaaaaaape26buh5zkbujozgyrlecuplate5qvmllg3ym3ajotrz4q2q6yzq"
+      [32m+[0m[0m defined_tags                   = (known after apply)
+      [32m+[0m[0m display_name                   = "deveu-dns-lb"
+      [32m+[0m[0m freeform_tags                  = (known after apply)
+      [32m+[0m[0m id                             = (known after apply)
+      [32m+[0m[0m ip_addresses                   = (known after apply)
+      [32m+[0m[0m is_preserve_source_destination = true
+      [32m+[0m[0m is_private                     = true
+      [32m+[0m[0m is_symmetric_hash_enabled      = (known after apply)
+      [32m+[0m[0m lifecycle_details              = (known after apply)
+      [32m+[0m[0m nlb_ip_version                 = "IPV4"
+      [32m+[0m[0m security_attributes            = (known after apply)
+      [32m+[0m[0m state                          = (known after apply)
+      [32m+[0m[0m subnet_id                      = "ocid1.subnet.oc1.eu-frankfurt-1.aaaaaaaadljwjyhxjx3ejt6w5nrzlpp5bun5qyxvv6ccc2zmtn3zcnjnzusq"
+      [32m+[0m[0m system_tags                    = (known after apply)
+      [32m+[0m[0m time_created                   = (known after apply)
+      [32m+[0m[0m time_updated                   = (known after apply)
+
+      [32m+[0m[0m reserved_ips (known after apply)
+    }
+
+[1m  # module.network_load_balancer_backend["deveu-dns-lb-deveu-dns-lb-backend-set-53-ocid1.instance.oc1.eu-frankfurt-1.antheljrvk7qqvacb6lxtq4epqopo22dtmewthvgzftv5j3l2wjez4unx7jq"].oci_network_load_balancer_backend.network_load_balancer_backend[0m will be created
+[0m  [32m+[0m[0m resource "oci_network_load_balancer_backend" "network_load_balancer_backend" {
+      [32m+[0m[0m backend_set_name         = "deveu-dns-lb-backend-set"
+      [32m+[0m[0m id                       = (known after apply)
+      [32m+[0m[0m ip_address               = (known after apply)
+      [32m+[0m[0m is_backup                = false
+      [32m+[0m[0m is_drain                 = false
+      [32m+[0m[0m is_offline               = false
+      [32m+[0m[0m name                     = (known after apply)
+      [32m+[0m[0m network_load_balancer_id = (known after apply)
+      [32m+[0m[0m port                     = 53
+      [32m+[0m[0m target_id                = "ocid1.instance.oc1.eu-frankfurt-1.antheljrvk7qqvacb6lxtq4epqopo22dtmewthvgzftv5j3l2wjez4unx7jq"
+      [32m+[0m[0m weight                   = 1
+    }
+
+[1m  # module.network_load_balancer_backend["deveu-dns-lb-deveu-dns-lb-backend-set-53-ocid1.instance.oc1.eu-frankfurt-1.antheljsvk7qqvacskvnebso6hwclz2lpylrxstynjht4xrli2iqxfe7fgfq"].oci_network_load_balancer_backend.network_load_balancer_backend[0m will be created
+[0m  [32m+[0m[0m resource "oci_network_load_balancer_backend" "network_load_balancer_backend" {
+      [32m+[0m[0m backend_set_name         = "deveu-dns-lb-backend-set"
+      [32m+[0m[0m id                       = (known after apply)
+      [32m+[0m[0m ip_address               = (known after apply)
+      [32m+[0m[0m is_backup                = false
+      [32m+[0m[0m is_drain                 = false
+      [32m+[0m[0m is_offline               = false
+      [32m+[0m[0m name                     = (known after apply)
+      [32m+[0m[0m network_load_balancer_id = (known after apply)
+      [32m+[0m[0m port                     = 53
+      [32m+[0m[0m target_id                = "ocid1.instance.oc1.eu-frankfurt-1.antheljsvk7qqvacskvnebso6hwclz2lpylrxstynjht4xrli2iqxfe7fgfq"
+      [32m+[0m[0m weight                   = 1
+    }
+
+[1m  # module.network_load_balancer_backend["deveu-dns-lb-deveu-dns-lb-backend-set-53-ocid1.instance.oc1.eu-frankfurt-1.antheljsvk7qqvacy3a5s4ovnjhsnxcyqoy5vhjev33tlmyod5nsmghlmhyq"].oci_network_load_balancer_backend.network_load_balancer_backend[0m will be created
+[0m  [32m+[0m[0m resource "oci_network_load_balancer_backend" "network_load_balancer_backend" {
+      [32m+[0m[0m backend_set_name         = "deveu-dns-lb-backend-set"
+      [32m+[0m[0m id                       = (known after apply)
+      [32m+[0m[0m ip_address               = (known after apply)
+      [32m+[0m[0m is_backup                = false
+      [32m+[0m[0m is_drain                 = false
+      [32m+[0m[0m is_offline               = false
+      [32m+[0m[0m name                     = (known after apply)
+      [32m+[0m[0m network_load_balancer_id = (known after apply)
+      [32m+[0m[0m port                     = 53
+      [32m+[0m[0m target_id                = "ocid1.instance.oc1.eu-frankfurt-1.antheljsvk7qqvacy3a5s4ovnjhsnxcyqoy5vhjev33tlmyod5nsmghlmhyq"
+      [32m+[0m[0m weight                   = 1
+    }
+
+[1m  # module.network_load_balancer_backend_set["deveu-dns-lb-backend-set"].oci_network_load_balancer_backend_set.network_load_balancer_backend_set[0m will be created
+[0m  [32m+[0m[0m resource "oci_network_load_balancer_backend_set" "network_load_balancer_backend_set" {
+      [32m+[0m[0m are_operationally_active_backends_preferred = (known after apply)
+      [32m+[0m[0m backends                                    = (known after apply)
+      [32m+[0m[0m id                                          = (known after apply)
+      [32m+[0m[0m ip_version                                  = "IPV4"
+      [32m+[0m[0m is_fail_open                                = (known after apply)
+      [32m+[0m[0m is_instant_failover_enabled                 = (known after apply)
+      [32m+[0m[0m is_instant_failover_tcp_reset_enabled       = (known after apply)
+      [32m+[0m[0m is_preserve_source                          = true
+      [32m+[0m[0m name                                        = "deveu-dns-lb-backend-set"
+      [32m+[0m[0m network_load_balancer_id                    = (known after apply)
+      [32m+[0m[0m policy                                      = "ROUND_ROBIN"
+
+      [32m+[0m[0m health_checker {
+          [32m+[0m[0m interval_in_millis  = 10000
+          [32m+[0m[0m port                = 53
+          [32m+[0m[0m protocol            = "TCP"
+          [32m+[0m[0m request_data        = (known after apply)
+          [32m+[0m[0m response_body_regex = (known after apply)
+          [32m+[0m[0m response_data       = (known after apply)
+          [32m+[0m[0m retries             = 3
+          [32m+[0m[0m return_code         = 200
+          [32m+[0m[0m timeout_in_millis   = 3000
+          [32m+[0m[0m url_path            = (known after apply)
+
+          [32m+[0m[0m dns (known after apply)
+        }
+    }
+
+[1m  # module.network_load_balancer_listener["deveu-dns-lb-tcp-lsn"].oci_network_load_balancer_listener.network_load_balancer_listener[0m will be created
+[0m  [32m+[0m[0m resource "oci_network_load_balancer_listener" "network_load_balancer_listener" {
+      [32m+[0m[0m default_backend_set_name = "deveu-dns-lb-backend-set"
+      [32m+[0m[0m id                       = (known after apply)
+      [32m+[0m[0m ip_version               = "IPV4"
+      [32m+[0m[0m is_ppv2enabled           = (known after apply)
+      [32m+[0m[0m l3ip_idle_timeout        = (known after apply)
+      [32m+[0m[0m name                     = "deveu-dns-lb-tcp-lsn"
+      [32m+[0m[0m network_load_balancer_id = (known after apply)
+      [32m+[0m[0m port                     = 53
+      [32m+[0m[0m protocol                 = "TCP"
+      [32m+[0m[0m tcp_idle_timeout         = (known after apply)
+      [32m+[0m[0m udp_idle_timeout         = (known after apply)
+    }
+
+[1m  # module.network_load_balancer_listener["deveu-dns-lb-udp-lsn"].oci_network_load_balancer_listener.network_load_balancer_listener[0m will be created
+[0m  [32m+[0m[0m resource "oci_network_load_balancer_listener" "network_load_balancer_listener" {
+      [32m+[0m[0m default_backend_set_name = "deveu-dns-lb-backend-set"
+      [32m+[0m[0m id                       = (known after apply)
+      [32m+[0m[0m ip_version               = "IPV4"
+      [32m+[0m[0m is_ppv2enabled           = (known after apply)
+      [32m+[0m[0m l3ip_idle_timeout        = (known after apply)
+      [32m+[0m[0m name                     = "deveu-dns-lb-udp-lsn"
+      [32m+[0m[0m network_load_balancer_id = (known after apply)
+      [32m+[0m[0m port                     = 53
+      [32m+[0m[0m protocol                 = "UDP"
+      [32m+[0m[0m tcp_idle_timeout         = (known after apply)
+      [32m+[0m[0m udp_idle_timeout         = (known after apply)
+    }
+
+[1mPlan:[0m 7 to add, 0 to change, 0 to destroy.
+[0m
+Changes to Outputs:
+  [32m+[0m[0m backend_sets           = {
+      [32m+[0m[0m deveu-dns-lb-backend-set = {
+          [32m+[0m[0m backend_set = {
+              [32m+[0m[0m are_operationally_active_backends_preferred = (known after apply)
+              [32m+[0m[0m backends                                    = (known after apply)
+              [32m+[0m[0m health_checker                              = [
+                  [32m+[0m[0m {
+                      [32m+[0m[0m dns                 = (known after apply)
+                      [32m+[0m[0m interval_in_millis  = 10000
+                      [32m+[0m[0m port                = 53
+                      [32m+[0m[0m protocol            = "TCP"
+                      [32m+[0m[0m request_data        = (known after apply)
+                      [32m+[0m[0m response_body_regex = (known after apply)
+                      [32m+[0m[0m response_data       = (known after apply)
+                      [32m+[0m[0m retries             = 3
+                      [32m+[0m[0m return_code         = 200
+                      [32m+[0m[0m timeout_in_millis   = 3000
+                      [32m+[0m[0m url_path            = (known after apply)
+                    },
+                ]
+              [32m+[0m[0m id                                          = (known after apply)
+              [32m+[0m[0m ip_version                                  = "IPV4"
+              [32m+[0m[0m is_fail_open                                = (known after apply)
+              [32m+[0m[0m is_instant_failover_enabled                 = (known after apply)
+              [32m+[0m[0m is_instant_failover_tcp_reset_enabled       = (known after apply)
+              [32m+[0m[0m is_preserve_source                          = true
+              [32m+[0m[0m name                                        = "deveu-dns-lb-backend-set"
+              [32m+[0m[0m network_load_balancer_id                    = (known after apply)
+              [32m+[0m[0m policy                                      = "ROUND_ROBIN"
+              [32m+[0m[0m timeouts                                    = [90mnull[0m[0m
+            }
+          [32m+[0m[0m id          = (known after apply)
+          [32m+[0m[0m name        = "deveu-dns-lb-backend-set"
+        }
+    }
+  [32m+[0m[0m backends               = {
+      [32m+[0m[0m "deveu-dns-lb-deveu-dns-lb-backend-set-53-ocid1.instance.oc1.eu-frankfurt-1.antheljrvk7qqvacb6lxtq4epqopo22dtmewthvgzftv5j3l2wjez4unx7jq" = {
+          [32m+[0m[0m backend = {
+              [32m+[0m[0m backend_set_name         = "deveu-dns-lb-backend-set"
+              [32m+[0m[0m id                       = (known after apply)
+              [32m+[0m[0m ip_address               = (known after apply)
+              [32m+[0m[0m is_backup                = false
+              [32m+[0m[0m is_drain                 = false
+              [32m+[0m[0m is_offline               = false
+              [32m+[0m[0m name                     = (known after apply)
+              [32m+[0m[0m network_load_balancer_id = (known after apply)
+              [32m+[0m[0m port                     = 53
+              [32m+[0m[0m target_id                = "ocid1.instance.oc1.eu-frankfurt-1.antheljrvk7qqvacb6lxtq4epqopo22dtmewthvgzftv5j3l2wjez4unx7jq"
+              [32m+[0m[0m timeouts                 = [90mnull[0m[0m
+              [32m+[0m[0m weight                   = 1
+            }
+          [32m+[0m[0m id      = (known after apply)
+          [32m+[0m[0m name    = (known after apply)
+        }
+      [32m+[0m[0m "deveu-dns-lb-deveu-dns-lb-backend-set-53-ocid1.instance.oc1.eu-frankfurt-1.antheljsvk7qqvacskvnebso6hwclz2lpylrxstynjht4xrli2iqxfe7fgfq" = {
+          [32m+[0m[0m backend = {
+              [32m+[0m[0m backend_set_name         = "deveu-dns-lb-backend-set"
+              [32m+[0m[0m id                       = (known after apply)
+              [32m+[0m[0m ip_address               = (known after apply)
+              [32m+[0m[0m is_backup                = false
+              [32m+[0m[0m is_drain                 = false
+              [32m+[0m[0m is_offline               = false
+              [32m+[0m[0m name                     = (known after apply)
+              [32m+[0m[0m network_load_balancer_id = (known after apply)
+              [32m+[0m[0m port                     = 53
+              [32m+[0m[0m target_id                = "ocid1.instance.oc1.eu-frankfurt-1.antheljsvk7qqvacskvnebso6hwclz2lpylrxstynjht4xrli2iqxfe7fgfq"
+              [32m+[0m[0m timeouts                 = [90mnull[0m[0m
+              [32m+[0m[0m weight                   = 1
+            }
+          [32m+[0m[0m id      = (known after apply)
+          [32m+[0m[0m name    = (known after apply)
+        }
+      [32m+[0m[0m "deveu-dns-lb-deveu-dns-lb-backend-set-53-ocid1.instance.oc1.eu-frankfurt-1.antheljsvk7qqvacy3a5s4ovnjhsnxcyqoy5vhjev33tlmyod5nsmghlmhyq" = {
+          [32m+[0m[0m backend = {
+              [32m+[0m[0m backend_set_name         = "deveu-dns-lb-backend-set"
+              [32m+[0m[0m id                       = (known after apply)
+              [32m+[0m[0m ip_address               = (known after apply)
+              [32m+[0m[0m is_backup                = false
+              [32m+[0m[0m is_drain                 = false
+              [32m+[0m[0m is_offline               = false
+              [32m+[0m[0m name                     = (known after apply)
+              [32m+[0m[0m network_load_balancer_id = (known after apply)
+              [32m+[0m[0m port                     = 53
+              [32m+[0m[0m target_id                = "ocid1.instance.oc1.eu-frankfurt-1.antheljsvk7qqvacy3a5s4ovnjhsnxcyqoy5vhjev33tlmyod5nsmghlmhyq"
+              [32m+[0m[0m timeouts                 = [90mnull[0m[0m
+              [32m+[0m[0m weight                   = 1
+            }
+          [32m+[0m[0m id      = (known after apply)
+          [32m+[0m[0m name    = (known after apply)
+        }
+    }
+  [32m+[0m[0m listeners              = {
+      [32m+[0m[0m deveu-dns-lb-tcp-lsn = {
+          [32m+[0m[0m id       = (known after apply)
+          [32m+[0m[0m listener = {
+              [32m+[0m[0m default_backend_set_name = "deveu-dns-lb-backend-set"
+              [32m+[0m[0m id                       = (known after apply)
+              [32m+[0m[0m ip_version               = "IPV4"
+              [32m+[0m[0m is_ppv2enabled           = (known after apply)
+              [32m+[0m[0m l3ip_idle_timeout        = (known after apply)
+              [32m+[0m[0m name                     = "deveu-dns-lb-tcp-lsn"
+              [32m+[0m[0m network_load_balancer_id = (known after apply)
+              [32m+[0m[0m port                     = 53
+              [32m+[0m[0m protocol                 = "TCP"
+              [32m+[0m[0m tcp_idle_timeout         = (known after apply)
+              [32m+[0m[0m timeouts                 = [90mnull[0m[0m
+              [32m+[0m[0m udp_idle_timeout         = (known after apply)
+            }
+          [32m+[0m[0m name     = "deveu-dns-lb-tcp-lsn"
+        }
+      [32m+[0m[0m deveu-dns-lb-udp-lsn = {
+          [32m+[0m[0m id       = (known after apply)
+          [32m+[0m[0m listener = {
+              [32m+[0m[0m default_backend_set_name = "deveu-dns-lb-backend-set"
+              [32m+[0m[0m id                       = (known after apply)
+              [32m+[0m[0m ip_version               = "IPV4"
+              [32m+[0m[0m is_ppv2enabled           = (known after apply)
+              [32m+[0m[0m l3ip_idle_timeout        = (known after apply)
+              [32m+[0m[0m name                     = "deveu-dns-lb-udp-lsn"
+              [32m+[0m[0m network_load_balancer_id = (known after apply)
+              [32m+[0m[0m port                     = 53
+              [32m+[0m[0m protocol                 = "UDP"
+              [32m+[0m[0m tcp_idle_timeout         = (known after apply)
+              [32m+[0m[0m timeouts                 = [90mnull[0m[0m
+              [32m+[0m[0m udp_idle_timeout         = (known after apply)
+            }
+          [32m+[0m[0m name     = "deveu-dns-lb-udp-lsn"
+        }
+    }
+  [32m+[0m[0m network_load_balancers = {
+      [32m+[0m[0m deveu-dns-lb = {
+          [32m+[0m[0m display_name          = "deveu-dns-lb"
+          [32m+[0m[0m id                    = (known after apply)
+          [32m+[0m[0m ip_addresses          = (known after apply)
+          [32m+[0m[0m network_load_balancer = {
+              [32m+[0m[0m assigned_ipv6                  = [90mnull[0m[0m
+              [32m+[0m[0m assigned_private_ipv4          = [90mnull[0m[0m
+              [32m+[0m[0m compartment_id                 = "ocid1.compartment.oc1..aaaaaaaape26buh5zkbujozgyrlecuplate5qvmllg3ym3ajotrz4q2q6yzq"
+              [32m+[0m[0m defined_tags                   = (known after apply)
+              [32m+[0m[0m display_name                   = "deveu-dns-lb"
+              [32m+[0m[0m freeform_tags                  = (known after apply)
+              [32m+[0m[0m id                             = (known after apply)
+              [32m+[0m[0m ip_addresses                   = (known after apply)
+              [32m+[0m[0m is_preserve_source_destination = true
+              [32m+[0m[0m is_private                     = true
+              [32m+[0m[0m is_symmetric_hash_enabled      = (known after apply)
+              [32m+[0m[0m lifecycle_details              = (known after apply)
+              [32m+[0m[0m network_security_group_ids     = [90mnull[0m[0m
+              [32m+[0m[0m nlb_ip_version                 = "IPV4"
+              [32m+[0m[0m reserved_ips                   = (known after apply)
+              [32m+[0m[0m security_attributes            = (known after apply)
+              [32m+[0m[0m state                          = (known after apply)
+              [32m+[0m[0m subnet_id                      = "ocid1.subnet.oc1.eu-frankfurt-1.aaaaaaaadljwjyhxjx3ejt6w5nrzlpp5bun5qyxvv6ccc2zmtn3zcnjnzusq"
+              [32m+[0m[0m subnet_ipv6cidr                = [90mnull[0m[0m
+              [32m+[0m[0m system_tags                    = (known after apply)
+              [32m+[0m[0m time_created                   = (known after apply)
+              [32m+[0m[0m time_updated                   = (known after apply)
+              [32m+[0m[0m timeouts                       = [90mnull[0m[0m
+            }
+        }
+    }
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.

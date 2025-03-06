@@ -1,0 +1,91 @@
+tenancy_ocid: "ocid1.tenancy.oc1..aaaaaaaa3ryzwdrhusy73pl3tnwqleemopdls2xgzorg5pmfnsuxicx7ykla"
+compartment_id: "ocid1.compartment.oc1..aaaaaaaape26buh5zkbujozgyrlecuplate5qvmllg3ym3ajotrz4q2q6yzq" ##Shared compartment
+#subnet_id: "ocid1.subnet.oc1.eu-frankfurt-1.aaaaaaaabpkyodja7k5g4xcuahgtbjlj66gdftazjpbhcve6rxvwrrup2o5a" ##Data Subnet
+region: "eu-frankfurt-1"
+network_load_balancer_map:
+  - display_name: "deveu-dns-lb"
+    is_preserve_source_destination: true
+    subnet_id: "ocid1.subnet.oc1.eu-frankfurt-1.aaaaaaaadljwjyhxjx3ejt6w5nrzlpp5bun5qyxvv6ccc2zmtn3zcnjnzusq" ##Data Subnet
+    is_private: true
+    nlb_ip_version: "IPV4"
+    defined_tags: {}
+ # - display_name: "NLB2"
+ #   is_preserve_source_destination: true
+ #   subnet_id: ""ocid1.subnet.oc1.eu-frankfurt-1.aaaaaaaabpkyodja7k5g4xcuahgtbjlj66gdftazjpbhcve6rxvwrrup2o5a" ##Data Subnet"
+ #   is_private: false
+ #   nlb_ip_version: "IPV4"
+ #   defined_tags: {}
+
+network_load_balancer_backend_set_map:
+  - display_name: "deveu-dns-lb-backend-set-tcp"
+    network_load_balancer_name: "deveu-dns-lb"
+    health_check_protocol: "TCP"
+    health_check_port: 53
+    policy: "FIVE_TUPLE"
+    is_preserve_source: true
+    ip_version: "IPV4"
+    interval_in_millis: 10000
+    retries: 3
+    timeout_in_millis: 3000
+    return_code: 200
+    response_data: ""
+  - display_name: "deveu-dns-lb-backend-set-udp"
+    network_load_balancer_name: "deveu-dns-lb"
+    health_check_protocol: "TCP"  # Note: UDP doesn't support health checks, so we use TCP
+    health_check_port: 53
+    policy: "FIVE_TUPLE"
+    is_preserve_source: true
+    ip_version: "IPV4"
+    interval_in_millis: 10000
+    retries: 3
+    timeout_in_millis: 3000
+    return_code: 200
+    response_data: ""
+
+network_load_balancer_backend_map:
+  - { backend_set_name: "deveu-dns-lb-backend-set-tcp",
+    network_load_balancer_name: "deveu-dns-lb",
+    backend_target_id: "ocid1.instance.oc1.eu-frankfurt-1.antheljsvk7qqvacskvnebso6hwclz2lpylrxstynjht4xrli2iqxfe7fgfq",
+    backend_port: 53
+  }
+  - { backend_set_name: "deveu-dns-lb-backend-set-tcp",
+    network_load_balancer_name: "deveu-dns-lb",
+    backend_target_id: "ocid1.instance.oc1.eu-frankfurt-1.antheljsvk7qqvacy3a5s4ovnjhsnxcyqoy5vhjev33tlmyod5nsmghlmhyq",
+    backend_port: 53
+  }
+  - { backend_set_name: "deveu-dns-lb-backend-set-tcp",
+    network_load_balancer_name: "deveu-dns-lb",
+    backend_target_id: "ocid1.instance.oc1.eu-frankfurt-1.antheljrvk7qqvacb6lxtq4epqopo22dtmewthvgzftv5j3l2wjez4unx7jq",
+    backend_port: 53
+  }
+  - { backend_set_name: "deveu-dns-lb-backend-set-udp",
+    network_load_balancer_name: "deveu-dns-lb",
+    backend_target_id: "ocid1.instance.oc1.eu-frankfurt-1.antheljsvk7qqvaccmspybiubu6vfzprzsgrokgu2bk5edukc6p454ppzoaq",
+    backend_port: 53
+  }
+  - { backend_set_name: "deveu-dns-lb-backend-set-udp",
+    network_load_balancer_name: "deveu-dns-lb",
+    backend_target_id: "ocid1.instance.oc1.eu-frankfurt-1.abtheljswz37vvifoqwjrnkpgfbyakiuvbinelkqg3m6pk7xiaualobcz4fq",
+    backend_port: 53
+  }
+  - { backend_set_name: "deveu-dns-lb-backend-set-udp",
+    network_load_balancer_name: "deveu-dns-lb",
+    backend_target_id: "ocid1.instance.oc1.eu-frankfurt-1.antheljsvk7qqvacqbtwo7hugpl635ocnminnw7myf5n7m4poinzuqaklacq",
+    backend_port: 53
+  }
+
+network_load_balancer_listener_map:
+  - {listener_name: "deveu-dns-lb-tcp-lsn",
+    backend_set_name: "deveu-dns-lb-backend-set-tcp",
+    network_load_balancer_name: "deveu-dns-lb",
+    listener_port: 53,
+    listener_protocol: "TCP",
+    ip_version: "IPV4"
+  }
+  - { listener_name: "deveu-dns-lb-udp-lsn",
+    backend_set_name: "deveu-dns-lb-backend-set-udp",
+    network_load_balancer_name: "deveu-dns-lb",
+    listener_port: 53,
+    listener_protocol: "UDP",
+    ip_version: "IPV4"
+  }
