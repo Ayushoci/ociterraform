@@ -3,5 +3,11 @@ data "oci_core_drgs" "hub"{
 }
 
 hub_drg_id ={for drg in data.oci_code_drgs.hub.drgs : drg.display_name => drg.id} ["XYZ-IAD-HUB-DRG"]
-
+drg_route_table_id  = {for drg_route_table in data.oci_core_drg_route_tables.hub.drg_route_Tables : drg_route_Table.display_name => drg_route_Table.id } [""]
 hub_compartment_id = "ocid1.12345..."
+
+
+
+data "oci_core_drg_route_tables" "hub"{
+   drg_id = local.hub_drg_id
+}
