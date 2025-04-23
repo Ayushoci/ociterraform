@@ -1,0 +1,5 @@
+data "oci_core_drgs" "hub"{
+ drg_id = local.hub_drg_id
+}
+
+hub_drg_id ={for drg in data.oci_code_drgs.hub.drgs : drg.display_name => drg.id} ["XYZ-IAD-HUB-DRG"]
