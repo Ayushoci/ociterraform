@@ -11,3 +11,24 @@ hub_compartment_id = "ocid1.12345..."
 data "oci_core_drg_route_tables" "hub"{
    drg_id = local.hub_drg_id
 }
+
+
+
+locals{
+ subnet_apps_dns_label = anytrue([ local.env_lower == "prod", local.env_lower == "test"]) ? "esliad${local.env_lower}appsu" : "esliad${local.env_lower}appsub"
+}
+
+dns_label = local.subnet_apps_dns_label
+
+
+locals {
+ default_app_dns_label = "esliad${local.env_lower}appsub"
+ legacy_app_dns_label = "esliad${local.env_lower}appsu"
+ subnet_app_dns_label = local.env_lower == "dev" ? local.default_app_dns_label : local.legacy_app_dns_label
+}
+
+dns_label = local.subnet_app_dns_label
+
+
+}
+
