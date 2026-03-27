@@ -1,0 +1,6 @@
+availability_domain = "poXp:US-ASHBURN-AD-1"
+instance_shape      = "VM.Standard.E5.Flex"
+instance_display_name = "example-instance"
+instance_image_id   = "ocid1.image.oc1.iad.aaaaaaaa4l64brs5udx52nedrhlex4cpaorcd2jwvpoududksmw4lgmameqq"
+ssh_public_key      = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpM3iBumu9Nw03ZGXKamg8SgN0sWkM+cAlyqNcEoedaUnUv9vAkDt1z3ibisSL6A/qEkAs7MDF0wrXHCL2pUko+mdiiVsPKRfYrhgwMqYNjq32if8yRIYcNBlKxXuSClfViJAlqnHZWlQaNcECD+M9aPbMv993BGJGZrtmgb8AWfxbpsKtbkfki78KO5t5C8fwHm6sobj0WwcS2n7bF0H5eonHvTHV4SJm9Yo22k3vKkJMeN5o12yrcmBRUoKisuMNjQumVHhmae7QOFDFwNfyb1lg6lJG/OItu+lJFlkEU//QvLd3GuYV6eWuW0IUgp7820BmcSAazKaiTp3AluWb rsa-key-20251014"
+compartment_id = "ocid1.compartment.oc1..aaaaaaaankxxangmacgmcj2qt4olgnzcdh4a5evhv5ig5clbjit74ohexfdq"
